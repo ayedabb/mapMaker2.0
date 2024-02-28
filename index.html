@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Generator</title>
+    <link href="styles.css" rel="stylesheet"/>
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+
+<div id="left-container">
+    <h2>Grid Generator</h2>
+    <p>*walls included*</p>
+    <section id="gridMenu">
+        <label for="xCoord">Select X Size (8-32):</label>
+        <input id="xCoord" name="xCoord" type="number" min="8" max="32" value="20" class="grid-size"/>
+        <br/>
+        <label for="yCoord">Select Y Size (8-32):</label>
+        <input id="yCoord" name="yCoord" type="number" min="8" max="32" value="11" class="grid-size"/>
+        <button id="gridGenerateButton">Generate Grid</button>
+    </section>
+
+
+
+    <p></p>
+    <section id="blockMenu">
+        <label>Select Obstacle:</label>
+        <div class="radio-group">
+            <input type="radio" name="image" value="floor.png" id="choiceFloor" checked="true">
+            <label for="choiceFloor"><img src="img/floor.png" alt="Floor"/> Floor</label>
+
+            <input type="radio" name="image" value="block.png" id="choiceBlock">
+            <label for="choiceBlock"><img src="img/block.png" alt="Block"/> Block</label>
+
+            <input type="radio" name="image" value="breakable.png" id="choiceBreakable">
+            <label for="choiceBreakable"><img src="img/breakable.png" alt="Breakable"/> Breakable</label>
+
+            <input type="radio" name="image" value="hole.png" id="choiceHole">
+            <label for="choiceHole"><img src="img/hole.png" alt="Hole"/> Hole</label>
+
+            <input type="radio" name="image" value="finish.png" id="choiceFinish">
+            <label for="choiceFinish"><img src="img/finish.png" alt="Finish"/> Finish</label>
+        </div>
+    </section>
+
+    <section id="blockMenu">
+        <label>Select Tank:</label>
+        <div class="radio-group">
+            <input type="radio" name="image" value="player.png" id="choicePlayer">
+            <label for="choicePlayer"><img src="img/player.png" alt="Player"/> Player</label>
+
+            <input type="radio" name="image" value="red.png" id="choiceRed">
+            <label for="choiceRed"><img src="img/red.png" alt="Red"/> Red</label>
+
+            
+            <input type="radio" name="image" value="orange.png" id="choiceOrange">
+            <label for="choiceOrange"><img src="img/orange.png" alt="Orange"/> Orange</label>
+
+            <input type="radio" name="image" value="yellow.png" id="choiceYellow">
+            <label for="choiceYellow"><img src="img/yellow.png" alt="Yellow"/> Yellow</label>
+
+            <input type="radio" name="image" value="blue.png" id="choiceBlue">
+            <label for="choiceBlue"><img src="img/blue.png" alt="Blue"/> Blue</label>
+            
+            <input type="radio" name="image" value="cyan.png" id="choiceCyan">
+            <label for="choiceCyan"><img src="img/cyan.png" alt="Cyan"/> Cyan</label>
+
+            <input type="radio" name="image" value="purple.png" id="choicePurple">
+            <label for="choicePurple"><img src="img/purple.png" alt="Purple"/> Purple</label>  
+            
+            <input type="radio" name="image" value="boss.png" id="choiceBoss">
+            <label for="choiceBoss"><img src="img/boss.png" alt="Boss"/> Boss</label>
+            
+        </div>
+    </section>
+
+    <section>
+        <label for="levelNumber">Level Number:</label>
+        <input type="number" id="levelNumber" placeholder="Enter level number">
+        <button onclick="saveToXML()">Save to XML</button>
+    </section>
+
+    <section>
+        <label for="fileInput">Load from XML:</label>
+        <input type="file" id="fileInput" accept=".xml" onchange="loadFromXML(this.files)">
+    </section>
+
+</div>
+
+<div id="right-container">
+    <div id="gridContainer" class="grid-container"></div>
+</div>
+
+
+</body>
+
+</html>

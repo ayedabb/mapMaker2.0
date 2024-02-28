@@ -1,0 +1,122 @@
+body {
+    background-color: #333;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: row; /* Keep the row direction for body */
+}
+
+#left-container {
+    width: 45%;
+    max-width: 400px; /* Adjust the max-width according to your design */
+    padding-right: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #404040;
+}
+
+#right-container {
+    flex-grow: 1; /* Allow the right container to grow and take available space */
+    display: flex;
+    justify-content: center;
+}
+
+.grid-container {
+    padding: 5px;
+    margin-top: 20px;
+    max-width: 100%; /* Allow the grid to take up the available width */
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+}
+
+h2 {
+    color: #256B41;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #aaa;
+}
+
+ section, button {
+    margin-bottom: 10px;
+    display: block;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #444;
+    color: #fff;
+}
+
+button {
+    cursor: pointer;
+    background-color: #222;
+    margin-left:  auto;
+    margin-right: auto;
+}
+
+
+.grid-cell {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #555;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Add margin for spacing */
+    background-color: #222;
+}
+
+.radio-group img {
+    margin-right: 10px; /* Adjust the margin for spacing */
+    min-width: 40px; /* Adjust the max-width according to your design */
+    min-height: 40px; /* Adjust the max-height according to your design */
+}
+
+input[type="radio"] {
+        visibility: hidden;
+}
+input[type="radio"]:checked + label{
+    box-shadow: 10px 10px 10px 0 #256B41;
+    transform: translate(-5px, -5px);
+}
+
+
+input[type="number"] {
+    background-color: #222;
+    color: #FFF;
+    border: none;
+    width: 4em;
+    font-size: larger;
+    margin: 5px;
+}
+input[type="number"]:focus {
+    text-decoration: none;
+    border: none;
+    box-shadow: 10px 10px 10px 0 #256B41;
+    transform: translate(-5px, -5px);
+}
+
+#blockMenu {
+    padding: 8px 40px;
+}
